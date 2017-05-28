@@ -23,7 +23,6 @@ namespace Audio_Broadcast
         private LinkedList<byte[]> SenderQueue = new LinkedList<byte[]>();
 
         private delegate byte EncoderMethod(short _raw);
-
         private EncoderMethod Encoder = MuLawEncoder.LinearToMuLawSample;
 
         public void StopVoice()
@@ -57,12 +56,14 @@ namespace Audio_Broadcast
                 if (n > 0)
                 {
                     string receive = buff + "";
+
                     if (receive.Equals(@"/quit"))
                     {
                         isOpend = false;
                         StopVoice();
                         client?.Dispose();
                     }
+
                 }
 
             }

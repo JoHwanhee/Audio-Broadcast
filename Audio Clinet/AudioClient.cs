@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Windows;
 using NAudio.Codecs;
 using NAudio.Wave;
 
@@ -49,13 +51,22 @@ namespace Audio_Clinet
 
         public void Run()
         {
-            sock.Connect(ep);
-            AudioInitialize();
+            try
+            {
+                sock.Connect(ep);
+                AudioInitialize();
 
-            Thread AudioReceiver = new Thread(AudioReceiverProc);
-            Thread SockReceiver = new Thread(SocketReceiverProc);
-            SockReceiver.Start();
-            AudioReceiver.Start();
+                Thread AudioReceiver = new Thread(AudioReceiverProc);
+                Thread SockReceiver = new Thread(SocketReceiverProc);
+                SockReceiver.Start();
+                AudioReceiver.Start();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e + "");
+                throw;
+            }
+
         }
 
         void SocketReceiverProc()

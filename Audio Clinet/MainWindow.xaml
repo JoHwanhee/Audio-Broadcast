@@ -8,11 +8,13 @@
         Title="MainWindow" Height="120" Width="374.868">
     <Grid>
         <Button x:Name="buttonConnect" Content="Connect" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" Width="75" Click="buttonConnect_Click" Height="23"/>
-        <TextBox x:Name="textBoxIp" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBoxPort" HorizontalAlignment="Left" Height="23" Margin="143,10,0,0" TextWrapping="Wrap" Text="7000" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxIp" HorizontalAlignment="Left" Height="23" Margin="41,10,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Width="63"/>
+        <TextBox x:Name="textBoxPort" HorizontalAlignment="Left" Height="23" Margin="207,10,0,0" TextWrapping="Wrap" Text="7000" VerticalAlignment="Top" Width="42"/>
         <Label x:Name="label" Content="서버 상태 :" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelIsConnected" Content="미연결" HorizontalAlignment="Left" Margin="79,38,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="DisConnect" HorizontalAlignment="Left" Margin="277,38,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="button" Content="DisConnect" HorizontalAlignment="Left" Margin="277,38,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Height="26"/>
+        <Label Content="IP :" HorizontalAlignment="Left" Margin="12,7,0,0" VerticalAlignment="Top"/>
+        <Label Content="Port :" HorizontalAlignment="Left" Margin="163,8,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
