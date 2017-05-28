@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Audio_Broadcast"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Audio Server" Height="350" Width="264.512">
+    <Grid HorizontalAlignment="Left" Width="374" Margin="-16,-24,0,-21">
+        <Button x:Name="ButtonOpen" Content="Open" HorizontalAlignment="Left" Margin="170,55,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="button_Open"/>
+        <TextBox x:Name="TextBoxPort" HorizontalAlignment="Left" Height="20" Margin="90,55,0,0" TextWrapping="Wrap" Text="7000" VerticalAlignment="Top" Width="72"/>
+        <Button x:Name="buttonClose" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,83,0,0" Click="buttonClose_Click" />
+        <Label x:Name="label_Copy" Content="Port :" HorizontalAlignment="Left" Margin="46,55,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="206" Margin="46,127,0,0" VerticalAlignment="Top" Width="199"/>
     </Grid>
 </Window>

@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Audio_Broadcast
 {
@@ -20,9 +8,22 @@ namespace Audio_Broadcast
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Server server;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void button_Open(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("서버 시작!");
+            server = new Server(Int32.Parse(TextBoxPort.Text));
+            server.Run();
+        }
+
+        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
