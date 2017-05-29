@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Emit;
 using System.Windows;
 
 namespace Audio_Broadcast
@@ -19,6 +20,7 @@ namespace Audio_Broadcast
             MessageBox.Show("서버 시작!");
             server = new Server(Int32.Parse(TextBoxPort.Text));
             server.Run();
+            
         }
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)

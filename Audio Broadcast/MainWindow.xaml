@@ -12,5 +12,6 @@
         <Button x:Name="buttonClose" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,83,0,0" Click="buttonClose_Click" />
         <Label x:Name="label_Copy" Content="Port :" HorizontalAlignment="Left" Margin="46,55,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="206" Margin="46,127,0,0" VerticalAlignment="Top" Width="199"/>
+        
     </Grid>
 </Window>
