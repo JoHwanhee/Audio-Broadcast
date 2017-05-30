@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Reflection.Emit;
 using System.Windows;
+using Audio_Broadcast.Common;
 
 namespace Audio_Broadcast
 {
@@ -10,6 +10,7 @@ namespace Audio_Broadcast
     public partial class MainWindow : Window
     {
         private Server server;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Audio_Broadcast
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

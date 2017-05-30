@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Net.Sockets;
-using System.Text;
 using System.Windows;
 
 namespace Audio_Clinet
@@ -46,7 +44,7 @@ namespace Audio_Clinet
         private void button_Click(object sender, RoutedEventArgs e)
         {
             // TODO 고쳐야함.
-            //client.Stop();
+            client.Stop();
         }
     }
 
