@@ -26,7 +26,20 @@ namespace Audio_Broadcast
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {
-            
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Speaker On!");
+            server.AudioStrt();
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("BroadCast On!");
+            server.AllClientsRun();
         }
     }
 }

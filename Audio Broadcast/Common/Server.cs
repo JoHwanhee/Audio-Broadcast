@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Windows;
 
 namespace Audio_Broadcast.Common
 {
@@ -13,7 +14,6 @@ namespace Audio_Broadcast.Common
         private IEnumerable<Client> _clientEnumerable => _clientDictionary.Values;
 
         private AudioSingleTone audioManager = AudioSingleTone.GetAudio();
-
         public int Port { get; set; }
         public bool IsServerOpened { get; set; }
         public bool IsAcceptThreadOpened { get; set; }
@@ -22,7 +22,6 @@ namespace Audio_Broadcast.Common
         public Server(int port)
         {
             Port = port;
-
             _accepThread = new Thread(AcceptThreadProc);
             _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         }
@@ -60,7 +59,7 @@ namespace Audio_Broadcast.Common
         private void Initialise()
         {
             IsServerOpened = true;
-            
+            IsAcceptThreadOpened = true;
         }
 
         private void AcceptThreadProc()
@@ -70,6 +69,7 @@ namespace Audio_Broadcast.Common
                 while (IsAcceptThreadOpened)
                 {
                     Socket accept = _serverSocket.Accept();
+                    MessageBox.Show("클라 접속!");
                     Client cli = new Client(accept);
                     cli.Run();
                     // TODO : cli Name 얻어야함
@@ -81,7 +81,7 @@ namespace Audio_Broadcast.Common
             }
         }
 
-        private void AllClientsRun()
+        public void AllClientsRun()
         {
             foreach (var client in _clientEnumerable)
             {

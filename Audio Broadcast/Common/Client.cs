@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Audio_Broadcast
 {
@@ -37,6 +38,7 @@ namespace Audio_Broadcast
 
         private void Initialize()
         {
+            MessageBox.Show("Initialize");
             IsClientOpened = true;
             IsReceiveThreadOpened = false;
             IsSendThreadOpened = false;

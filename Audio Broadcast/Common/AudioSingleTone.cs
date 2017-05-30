@@ -18,7 +18,7 @@ namespace Audio_Broadcast.Common
 
         public static AudioSingleTone GetAudio()
         {
-            if (audioInstance != null)
+            if (audioInstance == null)
             {
                 audioInstance = new AudioSingleTone();
             }

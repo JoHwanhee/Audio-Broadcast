@@ -11,7 +11,9 @@
         <TextBox x:Name="TextBoxPort" HorizontalAlignment="Left" Height="20" Margin="90,55,0,0" TextWrapping="Wrap" Text="7000" VerticalAlignment="Top" Width="72"/>
         <Button x:Name="buttonClose" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,83,0,0" Click="buttonClose_Click" />
         <Label x:Name="label_Copy" Content="Port :" HorizontalAlignment="Left" Margin="46,55,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="206" Margin="46,127,0,0" VerticalAlignment="Top" Width="199"/>
-        
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="166" Margin="46,167,0,0" VerticalAlignment="Top" Width="199"/>
+        <Button x:Name="button" Content="Speech" HorizontalAlignment="Left" Margin="46,86,0,0" VerticalAlignment="Top" Width="52" Click="button_Click"/>
+        <Button x:Name="button1" Content="BroadCast" HorizontalAlignment="Left" Margin="46,111,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+
     </Grid>
 </Window>
