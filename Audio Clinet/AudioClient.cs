@@ -113,8 +113,12 @@ namespace Audio_Clinet
                         }
                     }
                 }
-                OutProvider.AddSamples(outbuff, 0, outbuff.Length);
+                if (OutProvider.DiscardOnBufferOverflow)
+                {
+                    OutProvider.ClearBuffer();
+                }
 
+                OutProvider.AddSamples(outbuff, 0, outbuff.Length);
             }
         }
     }

@@ -66,8 +66,6 @@ namespace Audio_Broadcast
                 {
                     byte[] senddata = audiomanager.GetAudioData();
                     _clientSocket.Send(senddata);
-
-                    Thread.Sleep(100);
                 }
                 Thread.Sleep(100);
             }
