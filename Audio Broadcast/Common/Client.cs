@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Audio_Broadcast
 {
-    public class Client : IClient
+    public class Client
     {
         private readonly Socket _clientSocket;
         private readonly Thread _receiveThread;

@@ -9,7 +9,7 @@ using NAudio.Wave;
 
 namespace Audio_Broadcast.Common
 {
-    class AudioSingleTone : IAudioSingleTone
+    class AudioSingleTone 
     {
 
         private AudioSingleTone() { }

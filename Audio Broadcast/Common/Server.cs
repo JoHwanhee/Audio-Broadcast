@@ -5,12 +5,12 @@ using System.Threading;
 
 namespace Audio_Broadcast.Common
 {
-    class Server : IServer
+    class Server 
     {
         private readonly Thread _accepThread;
         private readonly Socket _serverSocket;
-        private Dictionary<string, IClient> _clientDictionary = new Dictionary<string, IClient>();
-        private IEnumerable<IClient> _clientEnumerable => _clientDictionary.Values;
+        private Dictionary<string, Client> _clientDictionary = new Dictionary<string, Client>();
+        private IEnumerable<Client> _clientEnumerable => _clientDictionary.Values;
 
         private AudioSingleTone audioManager = AudioSingleTone.GetAudio();
 
@@ -70,7 +70,7 @@ namespace Audio_Broadcast.Common
                 while (IsAcceptThreadOpened)
                 {
                     Socket accept = _serverSocket.Accept();
-                    IClient cli = new Client(accept);
+                    Client cli = new Client(accept);
                     cli.Run();
                     // TODO : cli Name 얻어야함
                     _clientDictionary.Add(cli.GetHashCode()+"", cli);
@@ -99,7 +99,7 @@ namespace Audio_Broadcast.Common
             }
         }
 
-        private void Clistop(IClient client)
+        private void Clistop(Client client)
         {
             client.IsSendThreadOpened = false;
             client.IsReceiveThreadOpened = false;

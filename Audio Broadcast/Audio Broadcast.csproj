@@ -63,9 +63,6 @@
     <Compile Include="Common\AudioSingleTone.cs" />
     <Compile Include="Common\Client.cs" />
     <Compile Include="BackUp\ClientBackup.cs" />
-    <Compile Include="Common\IAudioSingleTone.cs" />
-    <Compile Include="Common\IClient.cs" />
-    <Compile Include="Common\IServer.cs" />
     <Compile Include="Common\Server.cs" />
     <Compile Include="BackUp\ServerBackup.cs" />
     <Page Include="MainWindow.xaml">
